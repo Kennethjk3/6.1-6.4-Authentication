@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+
   def new
   end
 
@@ -14,5 +15,8 @@ class CustomersController < ApplicationController
 
   private
 
-  def custome_params
-    params.require(:custome).permit(:email, :name, :password, :password_confirmation)
+  def customer_params
+    params.require(:customer).permit(:email, :name, :password, :password_confirmation)
+  end
+
+end

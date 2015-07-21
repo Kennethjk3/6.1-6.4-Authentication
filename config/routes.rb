@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   root 'items#index'
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/login', to: 'sessions#destroy'
+  get '/items', to: 'items#index'
+  
+  get '/signin', to: 'sessions#new'
+  post '/signin' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
-  get 'signup' => 'customers#new'
-  post 'customers', to: 'customers#create'
+  get '/signup', to: 'customers#new'
+  post '/customers' => 'customers#create'
+
+
 end
